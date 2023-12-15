@@ -137,7 +137,7 @@ export const AccountListItem = ({
         // Without this check, the account will be selected after
         // the account options menu closes
         if (!accountOptionsMenuOpen) {
-          onClick();
+          onClick?.();
         }
       }}
     >
@@ -183,7 +183,7 @@ export const AccountListItem = ({
                 as="button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  onClick();
+                  onClick?.();
                 }}
                 variant={TextVariant.bodyMdMedium}
                 className="multichain-account-list-item__account-name__button"
@@ -334,7 +334,7 @@ AccountListItem.propTypes = {
   /**
    * Function to execute when the item is clicked
    */
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   /**
    * Function that closes the menu
    */
