@@ -4189,7 +4189,7 @@ export default class MetamaskController extends EventEmitter {
         },
       );
     } catch (e) {
-      log.debug();
+      log.debug(e);
     }
     ///: END:ONLY_INCLUDE_IF
 
